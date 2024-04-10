@@ -7,7 +7,7 @@ public class HealthBar : MonoBehaviour
 {
 
     public FloatReference playerHealth, playerMaxHealth;
-    Slider slider;
+    public Slider slider;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,7 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float fillValue = playerHealth.value / playerMaxHealth.value;
-        slider.value = fillValue;
+        // float fillValue = playerHealth.value / playerMaxHealth.value;
+        slider.value = playerHealth.value;
     }
 }
